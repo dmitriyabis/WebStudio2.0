@@ -46,7 +46,7 @@
       <section class="business">
         <div class="container">
         <h1 class="business-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="business-order">Замовити послугу</button>
+        <button class="business-order" data-modal-open>Замовити послугу</button>
       </div>
       </section>
       <section class="features">
@@ -366,8 +366,66 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe">
+          <p class="subscribe-text">Підпишіться на розсилку</p>
+          <form class="footer-form">
+            <input type="email" class="footer-form-input" placeholder="E-mail">
+            <button type="submit" class="footer-form-btn">Підписатися
+              <svg width="24" height="24" class="footer-form-btn-svg">
+                <use href="./symbol.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <button class="modal-btn-close" data-modal-close>
+          <svg width="11" height="11" class="btn-close-svg">
+            <use href="./symbol.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <form class="modal-form">
+          <label for="">
+            Ім'я
+            <span class="modal-form-spn">
+            <input type="text" class="input-name" name="user-name" required minlength="3" maxlength="10">
+            <svg width="12" height="12" class="modal-svg">
+              <use href="./symbol.svg#person-modal" class="modal-span-icon"></use>
+            </svg>
+          </span>
+          </label>
+          <label for="">
+            Телефон
+            <span class="modal-form-spn">
+            <input type="tel" class="input-tel" name="user-tel" pattern="^380\d{9}$" maxlength="12" title="Номер повинен починатися на 380 і повинен мати 12 цифр" required>
+            <svg width="13" height="13" class="modal-svg">
+              <use  href="./symbol.svg#phone-modal" class="modal-span-icon"></use>
+            </svg>
+          </span>
+          </label>
+          <label for="">
+            Пошта
+            <span class="modal-form-spn">
+            <input class="input-email" type="email" name="user-email" required>
+            <svg width="15" height="12" class="modal-svg">
+              <use href="./symbol.svg#email-modal" class="modal-span-icon"></use>
+            </svg>
+          </span>
+          </label>
+          <label for="">
+            Коментар
+            <textarea class="modal-massage" name="user-message" placeholder="Введіть текст"></textarea>
+            <input type="checkbox" name="user-privacy" class="privacy-input" required>
+              <span class="privacy-span">Погоджуюся з розсилкою та приймаю <a class="privacy-link" href="">Умови договору</a></span>
+          </label>
+          <button type="submit" class="modal-form-btn">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
