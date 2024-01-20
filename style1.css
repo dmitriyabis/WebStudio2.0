@@ -1,3 +1,8 @@
+body {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #212121;
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -42,15 +47,24 @@ span {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.28px;
-}
-.header-list-item:hover {
-  color: #2196f3;
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
+  position: relative;
   font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.underline::after {
+  position: absolute;
+  top: 46px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+.underline {
+  color: #2196f3;
 }
 .header-address-list {
   margin-top: 32px;
@@ -161,11 +175,18 @@ span {
   justify-content: center;
 }
 .card-item {
-  width: 370px;
-  height: 404px;
-  flex-shrink: 0;
-  border: 1px solid #eee;
-  background: #fff;
+  position: relative;
+  flex-basis: calc((100% - 60px) / 3);
+  outline: 1px solid #eee;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.card-item:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+.card-item:hover .overlay {
+  transform: translateY(0);
 }
 .card-title {
   color: #212121;
@@ -190,6 +211,23 @@ span {
   margin-left: 24px;
   margin-top: 0;
   margin-bottom: 20px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-101%);
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.54px;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 370px;
+  height: 294px;
+  padding: 63px 24px;
+  transition: transform 0.5s ease;
 }
 .footer {
   padding-top: 72px;

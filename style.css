@@ -1,4 +1,7 @@
 body {
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #212121;
 }
 .container {
   padding-left: 15px;
@@ -36,7 +39,7 @@ span {
   margin-right: 318px;
   margin-bottom: 32px;
 }
-.header-list-item {
+.header-list-item-link {
   color: #212121;
   font-family: Roboto;
   font-size: 14px;
@@ -44,15 +47,24 @@ span {
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.28px;
-}
-.header-list-item:hover {
-  color: #2196f3;
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
+  position: relative;
   font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.28px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.underline::after {
+  position: absolute;
+  top: 46px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+.underline {
+  color: #2196f3;
 }
 .header-address-list {
   margin-top: 32px;
