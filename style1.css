@@ -9,6 +9,10 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+/*.header {
+  position: sticky;
+  top: 0;
+}*/
 .header-navigation {
   display: flex;
 }
@@ -170,9 +174,9 @@ span {
 .card-list {
   margin-top: 56px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
 }
 .card-item {
   position: relative;
@@ -216,6 +220,9 @@ span {
   position: absolute;
   top: 0;
   left: 0;
+  width: 370px;
+  height: 294px;
+  padding: 63px 24px;
   transform: translateY(-101%);
   color: #fff;
   font-size: 18px;
@@ -224,9 +231,6 @@ span {
   line-height: 28px;
   letter-spacing: 0.54px;
   background-color: rgba(33, 150, 243, 0.9);
-  width: 370px;
-  height: 294px;
-  padding: 63px 24px;
   transition: transform 0.5s ease;
 }
 .footer {

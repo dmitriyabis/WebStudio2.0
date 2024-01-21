@@ -9,6 +9,12 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+.header {
+  position: sticky;
+  top: 0;
+  background: #ffff;
+  z-index: 1;
+}
 .header-navigation {
   display: flex;
 }
