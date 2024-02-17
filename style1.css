@@ -180,20 +180,7 @@ span {
   flex-wrap: wrap;
   gap: 30px;
 }
-.card-item {
-  position: relative;
-  flex-basis: calc((100% - 60px) / 3);
-  outline: 1px solid #eee;
-  transition: 0.5s;
-  overflow: hidden;
-}
-.card-item:hover {
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-}
-.card-item:hover .overlay {
-  transform: translateY(0);
-}
+
 .card-title {
   color: #212121;
   font-family: Roboto;
@@ -218,6 +205,20 @@ span {
   margin-top: 0;
   margin-bottom: 20px;
 }
+.card-item {
+  position: relative;
+  flex-basis: calc((100% - 60px) / 3);
+  outline: 1px solid #eee;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.card-item:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+.card-item:hover .overlay {
+  transform: translateY(0);
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -225,7 +226,7 @@ span {
   width: 370px;
   height: 294px;
   padding: 63px 24px;
-  transform: translateY(-101%);
+  transform: translateY(140%);
   color: #fff;
   font-size: 18px;
   font-style: normal;

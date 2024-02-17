@@ -547,7 +547,8 @@ span {
   left: 50%;
   padding: 40px;
   background-color: #ffffff;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1) scaleY(1) rotate(0);
+  transition: transform 300ms linear;
   max-width: 528px;
 }
 .modal-title {
@@ -697,4 +698,7 @@ label {
   gap: 7px;
   justify-content: center;
   align-items: center;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
