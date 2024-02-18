@@ -158,10 +158,6 @@ span {
   padding-bottom: 6px;
 }
 .portfolio-button-item:hover {
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 6px;
-  padding-bottom: 6px;
   border-radius: 4px;
   background: #2196f3;
   color: #fff;
